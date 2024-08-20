@@ -1,0 +1,22 @@
+name: Build and Test
+on: [push]
+
+jobs:
+  job1:
+    steps:
+      - name: Run command
+        uses: davidbuzinski/run-command@main
+        with:
+          command: ver
+  job2:
+    steps:
+      - name: Run command
+        uses: davidbuzinski/run-command@main
+        with:
+          command: ver
+  job3:
+    steps:
+      - name: Run command
+        uses: davidbuzinski/run-command@main
+        with:
+          command: ver
