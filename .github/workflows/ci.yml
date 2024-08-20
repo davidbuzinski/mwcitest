@@ -3,18 +3,21 @@ on: [push]
 
 jobs:
   job1:
+    runs-on: ubuntu-latest
     steps:
       - name: Run command
         uses: davidbuzinski/run-command@main
         with:
           command: ver
   job2:
+    runs-on: ubuntu-latest
     steps:
       - name: Run command
         uses: davidbuzinski/run-command@main
         with:
           command: ver
   job3:
+    runs-on: ubuntu-latest
     steps:
       - name: Run command
         uses: davidbuzinski/run-command@main
