@@ -5,6 +5,8 @@ jobs:
   job1:
     runs-on: self-hosted
     steps:
+      - run: echo $MW_CI
+      - run: echo $MATHWORKS_LICENSING_ENDPOINT
       - name: Run command
         uses: davidbuzinski/run-command@main
         with:
@@ -12,6 +14,8 @@ jobs:
   job2:
     runs-on: self-hosted
     steps:
+      - run: echo $MW_CI
+      - run: echo $MATHWORKS_LICENSING_ENDPOINT
       - name: Run command
         uses: davidbuzinski/run-command@main
         with:
@@ -19,6 +23,8 @@ jobs:
   job3:
     runs-on: self-hosted
     steps:
+      - run: echo $MW_CI
+      - run: echo $MATHWORKS_LICENSING_ENDPOINT
       - name: Run command
         uses: davidbuzinski/run-command@main
         with:
