@@ -71,7 +71,7 @@ plan("tbxIntegTest") = TestTask("integTests/toolboxPackaging",SourceFiles="toolb
 
 
 %% Create the release task - does nothing but depends on other tasks
-plan("release") = Task(Dependencies="tbxIntegTest", ...
+plan("release") = Task(Dependencies="toolbox", ...
     Description="Produce a fully qualified toolbox for release");
 
 
