@@ -9,22 +9,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build MATLAB toolbox
-        uses: matlab-actions/run-build@v2
+        uses: davidbuzinski/run-command@v2
         with:
-          tasks: release
+          command: buildtool release
   build-windows:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
       - name: Build MATLAB toolbox
-        uses: matlab-actions/run-build@v2
+        uses: davidbuzinski/run-command@v2
         with:
-          tasks: release
+          command: buildtool release
   build-macos:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
       - name: Build MATLAB toolbox
-        uses: matlab-actions/run-build@v2
+        uses: davidbuzinski/run-command@v2
         with:
-          tasks: release
+          command: buildtool release
