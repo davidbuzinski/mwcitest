@@ -1,25 +1,30 @@
-name: Build and Test
-on: [push]
+name: MATLAB Build
+on: 
+  push:
+  pull_request:
 
 jobs:
-  job1:
+  build-linux:
     runs-on: self-hosted
     steps:
-      - name: Run command
-        uses: davidbuzinski/run-command@main
+      - uses: actions/checkout@v4
+      - name: Build MATLAB toolbox
+        uses: matlab-actions/run-build@v2
         with:
-          command: ver
-  job2:
+          tasks: release
+  build-windows:
     runs-on: self-hosted
     steps:
-      - name: Run command
-        uses: davidbuzinski/run-command@main
+      - uses: actions/checkout@v4
+      - name: Build MATLAB toolbox
+        uses: matlab-actions/run-build@v2
         with:
-          command: ver
-  job3:
+          tasks: release
+  build-macos:
     runs-on: self-hosted
     steps:
-      - name: Run command
-        uses: davidbuzinski/run-command@main
+      - uses: actions/checkout@v4
+      - name: Build MATLAB toolbox
+        uses: matlab-actions/run-build@v2
         with:
-          command: ver
+          tasks: release
