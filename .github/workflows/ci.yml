@@ -12,6 +12,7 @@ jobs:
         id: build-cache-linux
         uses: actions/cache@v4
         with:
+          key: build-cache-linux
           path: |
             .buildtool
             toolbox
@@ -29,6 +30,7 @@ jobs:
         id: build-cache-windows
         uses: actions/cache@v4
         with:
+          key: build-cache-windows
           path: |
             .buildtool
             toolbox
@@ -46,6 +48,7 @@ jobs:
         id: build-cache-macos
         uses: actions/cache@v4
         with:
+          key: build-cache-macos
           path: |
             .buildtool
             toolbox
