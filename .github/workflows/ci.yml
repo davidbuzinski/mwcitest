@@ -12,7 +12,7 @@ jobs:
       - name: Setup MATLAB
         uses: matlab-actions/setup-matlab@v1
       - name: Run Command
-        run: matlab -batch 'ver'
+        run: matlab -batch 'license inuse'
   build-windows:
     runs-on: windows-latest
     steps:
