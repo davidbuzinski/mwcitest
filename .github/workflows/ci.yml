@@ -1,60 +1,35 @@
 name: MATLAB Build
 on: 
   push:
-  pull_request:
 
 jobs:
   build-linux:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Restore buildtool cache
-        id: build-cache-linux
-        uses: actions/cache@v4
+      - name: Setup MATLAB
+        uses: matlab-actions/setup-matlab@v1
+      - name: Run Command
+        uses: matlab-actions/run-command@v1
         with:
-          key: build-cache-linux
-          path: |
-            .buildtool
-            toolbox
-            release
-            results
-      - name: Build MATLAB toolbox
-        uses: davidbuzinski/run-command@main
-        with:
-          command: buildtool release
+          command: license inuse
   build-windows:
-    runs-on: self-hosted
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Restore buildtool cache
-        id: build-cache-windows
-        uses: actions/cache@v4
+      - name: Setup MATLAB
+        uses: matlab-actions/setup-matlab@v1
+      - name: Run Command
+        uses: matlab-actions/run-command@v1
         with:
-          key: build-cache-windows
-          path: |
-            .buildtool
-            toolbox
-            release
-            results
-      - name: Build MATLAB toolbox
-        uses: davidbuzinski/run-command@main
-        with:
-          command: buildtool release
+          command: license inuse
   build-macos:
-    runs-on: self-hosted
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Restore buildtool cache
-        id: build-cache-macos
-        uses: actions/cache@v4
+      - name: Setup MATLAB
+        uses: matlab-actions/setup-matlab@v1
+      - name: Run Command
+        uses: matlab-actions/run-command@v1
         with:
-          key: build-cache-macos
-          path: |
-            .buildtool
-            toolbox
-            release
-            results
-      - name: Build MATLAB toolbox
-        uses: davidbuzinski/run-command@main
-        with:
-          command: buildtool release
+          command: license inuse
