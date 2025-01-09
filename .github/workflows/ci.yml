@@ -10,9 +10,7 @@ jobs:
       - name: Setup MATLAB
         uses: matlab-actions/setup-matlab@v1
       - name: Run Command
-        uses: matlab-actions/run-command@v1
-        with:
-          command: license inuse
+        run: matlab -batch 'license inuse'
   build-windows:
     runs-on: windows-latest
     steps:
@@ -20,9 +18,7 @@ jobs:
       - name: Setup MATLAB
         uses: matlab-actions/setup-matlab@v1
       - name: Run Command
-        uses: matlab-actions/run-command@v1
-        with:
-          command: license inuse
+        run: matlab -batch 'license inuse'
   build-macos:
     runs-on: macos-latest
     steps:
@@ -30,6 +26,4 @@ jobs:
       - name: Setup MATLAB
         uses: matlab-actions/setup-matlab@v1
       - name: Run Command
-        uses: matlab-actions/run-command@v1
-        with:
-          command: license inuse
+        run: matlab -batch 'license inuse'
