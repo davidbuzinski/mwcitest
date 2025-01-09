@@ -4,6 +4,7 @@ on:
 
 env:
   MATHWORKS_LICENSING_ENDPOINT: dev
+  
 jobs:
   build-linux:
     runs-on: ubuntu-latest
