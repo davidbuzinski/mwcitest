@@ -3,6 +3,7 @@ on:
   push:
 env:
   MATHWORKS_LICENSING_ENDPOINT: stage
+
 jobs:
   build-linux:
     runs-on: ubuntu-latest
