@@ -1,10 +1,6 @@
 name: MATLAB Build
 on: 
-  push:
-
-env:
-  MATHWORKS_LICENSING_ENDPOINT: dev
-  
+  push:  
 jobs:
   build-linux:
     runs-on: ubuntu-latest
