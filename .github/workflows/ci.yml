@@ -2,7 +2,7 @@ name: MATLAB Build
 on: 
   push:
 env:
-  MATHWORKS_LICENSING_ENDPOINT: dev
+  MATHWORKS_LICENSING_ENDPOINT: stage
 
 jobs:
   build-linux:
